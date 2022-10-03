@@ -95,8 +95,8 @@ le_job_involvement.inverse_transform(np.argsort(closest_for_employee[0])[:10])
 
 """# 3.predict"""
 
-!pip install xgboost -U -q
-!pip install sklearn -U -q
+pip install xgboost
+pip install sklearn
 
 selected_df = hru[['department','edu_field','gender','job_role','marital','age','dfh','edu','income','salary_increase','stock_option','training','years_promotion','wlb','satisfaction_job']]
 
