@@ -183,8 +183,6 @@ shap_values = explainer.shap_values(X_enc)
 
 shap.summary_plot(shap_values, X_enc, plot_type="bar")
 
-shap.summary_plot(shap_values, X_enc)
-
 shap.dependence_plot("age", shap_values, X_enc)
 
 shap.initjs()
