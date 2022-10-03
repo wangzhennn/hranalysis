@@ -1,4 +1,4 @@
-#pip install umap-learn -q
+pip install umap-learn
 
 import pandas as pd
 import numpy as np
