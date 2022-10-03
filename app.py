@@ -5,6 +5,7 @@ import pandas as pd
 import numpy as np
 from matplotlib import pyplot as plt
 import altair as alt
+install seaborn
 #import seaborn as sns
 #sns.set()
 
