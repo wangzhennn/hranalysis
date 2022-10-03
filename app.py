@@ -174,8 +174,6 @@ mean_squared_error(y_train, y_pred_train, squared=False)
 feat_importances = pd.Series(model_xgb.feature_importances_, index=X_enc.columns)
 feat_importances.nlargest(20).plot(kind='barh')
 
-!pip install shap
-
 import shap
 
 explainer = shap.TreeExplainer(model_xgb)
