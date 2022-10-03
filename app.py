@@ -6,7 +6,7 @@ import numpy as np
 from matplotlib import pyplot as plt
 import altair as alt
 #import seaborn as sns
-sns.set()
+#sns.set()
 
 hru=pd.read_csv("hru.csv")
 
