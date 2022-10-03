@@ -1,4 +1,6 @@
+pip uninstall umap
 pip install umap-learn
+import umap.umap_ as umap
 
 import pandas as pd
 import numpy as np
