@@ -1,4 +1,3 @@
-pip uninstall umap
 pip install umap-learn
 import umap.umap_ as umap
 
