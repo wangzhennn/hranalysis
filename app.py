@@ -12,6 +12,7 @@ import shap
 from streamlit_shap import st_shap
 from sklearn.preprocessing import StandardScaler
 from xgboost import XGBRegressor
+from sklearn.preprocessing import OneHotEncoder
 
 hru=pd.read_csv("hru.csv")
 
