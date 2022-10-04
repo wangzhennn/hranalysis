@@ -72,12 +72,12 @@ if st.button('Predict! 🚀'):
                                'edu':edu,
                                'stock_option':stock_option,
                                'training':training,
-                               'num_companiesworked'=num_companiesworked,
-                               'year_working'=year_working,
-                               'performance'=performance,
-                               'job_involvement'=job_involvement,
-                               'satisfaction_job'=satisfaction_job,
-                               'wlb'=wlb}, index=[0])
+                               'num_companiesworked':num_companiesworked,
+                               'year_working':year_working,
+                               'performance':performance,
+                               'job_involvement':job_involvement,
+                               'satisfaction_job':satisfaction_job,
+                               'wlb':wlb}, index=[0])
     new_values_num = pd.DataFrame(scaler.transform(new_df_num), columns = new_df_num.columns, index=[0])  
     
     #bring all columns together
