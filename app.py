@@ -9,4 +9,4 @@ import streamlit as st
 
 hru=pd.read_csv("hru.csv")
 
-print(hru.head(5))
+st.title('hii')
