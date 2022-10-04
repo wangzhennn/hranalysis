@@ -80,7 +80,7 @@ if st.button('Predict! 🚀'):
                                'gender':gender,
                                'job_role':job_role,
                                'marital':marital}, index=[0])
-            new_values_cat = pd.DataFrame(ohe.transform(new_df_cat),columns=cats,index=[0])
+            new_values_cat = pd.DataFrame(ohe.fit_transform(new_df_cat),columns=cats,index=[0])
 
             
     
