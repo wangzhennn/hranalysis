@@ -10,3 +10,4 @@ xgboost
 matplotlib
 umap-learn
 pickle
+seaborn
