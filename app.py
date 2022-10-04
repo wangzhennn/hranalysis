@@ -10,6 +10,7 @@ import pickle
 import itertools
 import shap
 from streamlit_shap import st_shap
+from sklearn.preprocessing import StandardScaler
 
 hru=pd.read_csv("hru.csv")
 
