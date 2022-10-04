@@ -8,6 +8,7 @@ sns.set()
 import streamlit as st
 import pickle
 import itertools
+import shap
 from streamlit_shap import st_shap
 
 hru=pd.read_csv("hru.csv")
