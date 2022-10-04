@@ -69,7 +69,6 @@ if st.button('Predict! 🚀'):
                                'stock_option':stock_option,
                                'training':training,
                                'num_companiesworked':num_companiesworked,
-                               'year_working':year_working,
                                'performance':performance,
                                'job_involvement':job_involvement,
                                'satisfaction_job':satisfaction_job,
