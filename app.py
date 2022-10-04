@@ -68,9 +68,9 @@ if st.button('Predict! 🚀'):
                                'dfh':dfh,
                                'edu':edu,
                                'stock_option':stock_option,
+                               'num_companiesworked':num_companiesworked,
                                'training':training,
                                'years_working':years_working,
-                               'num_companiesworked':num_companiesworked,
                                'performance':performance,
                                'job_involvement':job_involvement,
                                'satisfaction_job':satisfaction_job,
@@ -84,7 +84,7 @@ if st.button('Predict! 🚀'):
                                'gender':gender,
                                'job_role':job_role,
                                'marital':marital}, index=[0])
-            new_values_cat = pd.DataFrame(ohe.transform(new_df_cat),columns=cats,index=[0])
+            new_values_cat = pd.DataFrame(ohe.transform(new_df_cat),columns=new_df_cat.columns,index=[0])
 
             
     
