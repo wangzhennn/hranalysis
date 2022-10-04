@@ -62,15 +62,6 @@ marital=st.selectbox('marital',options=ohe.categories_[5])
 
 # make a nice button that triggers creation of a new data-line in the format that the model expects and prediction
 if st.button('Predict! 🚀'):
-            # make a DF for categories and transform with one-hot-encoder
-            new_df_cat = pd.DataFrame({'buiness_travel':buiness_travel,
-                               'department':department,
-                               'edu_field':edu_field,
-                               'gender':gender,
-                               'job_role':job_role,
-                               'marital':marital}, index=[0])
-            new_values_cat = pd.DataFrame(ohe.transform(new_df_cat),columns=cats,index=[0])
-
             # make a DF for the numericals and standard scale
             new_df_num = pd.DataFrame({'age':age,
                                'dfh':dfh,
@@ -84,6 +75,17 @@ if st.button('Predict! 🚀'):
                                'satisfaction_job':satisfaction_job,
                                'wlb':wlb}, index=[0])
             new_values_num = pd.DataFrame(scaler.transform(new_df_num), columns = new_df_num.columns, index=[0])  
+            
+            # make a DF for categories and transform with one-hot-encoder
+            new_df_cat = pd.DataFrame({'buiness_travel':buiness_travel,
+                               'department':department,
+                               'edu_field':edu_field,
+                               'gender':gender,
+                               'job_role':job_role,
+                               'marital':marital}, index=[0])
+            new_values_cat = pd.DataFrame(ohe.transform(new_df_cat),columns=cats,index=[0])
+
+            
     
             #bring all columns together
             line_to_pred = pd.concat([new_values_num, new_values_cat], axis=1)
