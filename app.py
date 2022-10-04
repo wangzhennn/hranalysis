@@ -1,4 +1,3 @@
-import steamlit as st
 import pandas as pd
 import numpy as np
 from matplotlib import pyplot as plt
@@ -6,6 +5,7 @@ import altair as alt
 import umap.umap_ as umap
 import seaborn as sns
 sns.set()
+import steamlit as st
 
 hru=pd.read_csv("hru.csv")
 
