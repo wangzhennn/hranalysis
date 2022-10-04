@@ -48,6 +48,7 @@ dfh=st.number_input('Distance From Home To Company (km)',0,500)
 edu=st.select_slider('Education Level',[1,2,3,4,5])
 stock_option=st.select_slider('Expected Stock Option Level',[1,2,3,4,5])
 training=st.number_input('Expected Training Times per yer',0,100)
+years_working=st.number_input('working',0,100)
 num_companiesworked=st.number_input('Total number of companies you have worked for',0,100)
 performance=st.select_slider('Expected Performance',[1,2,3,4,5])
 job_involvement=st.select_slider('Expected Job Involvement',[1,2,3,4,5])
@@ -68,6 +69,7 @@ if st.button('Predict! 🚀'):
                                'edu':edu,
                                'stock_option':stock_option,
                                'training':training,
+                               'years_working':years_working,
                                'num_companiesworked':num_companiesworked,
                                'performance':performance,
                                'job_involvement':job_involvement,
