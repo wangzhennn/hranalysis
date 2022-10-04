@@ -33,7 +33,7 @@ st.markdown(hide_st_style, unsafe_allow_html=True)
 def read_objects():
     model_xgb = pickle.load(open('model_xgb.pkl','rb'))
     scaler = pickle.load(open('scaler.pkl','rb'))
-    ohe = pickle.load(open('ohe.pkl','rb'))
+    ohe_pkl = pickle.load(open('ohe.pkl','rb'))
     shap_values = pickle.load(open('shap_values.pkl','rb'))
     cats = list(itertools.chain(*ohe.categories_))
     return model_xgb, scaler, ohe, cats, shap_values
@@ -81,10 +81,9 @@ if st.button('Predict! 🚀'):
                                'gender':gender,
                                'job_role':job_role,
                                'marital':marital}, index=[0])
-            ohe = OneHotEncoder(min_frequency=1, sparse=False).fit(new_df_cat)
             new_values_cat = pd.DataFrame(ohe.transform(new_df_cat),columns=cats,index=[0])
             
-            line_to_pred = pd.concat([[new_values_num], [new_values_cat]], axis=1)
+            line_to_pred = pd.concat([new_values_num, new_values_cat], axis=1)
             predicted_value = model_xgb.predict(line_to_pred)[0]
             st.metric(label="Predicted Income", value=f'{round(predicted_value)} ')
             st.subheader(f'Wait, why {round(predicted_value)} kr? Explain, AI 🤖:')
