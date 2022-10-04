@@ -6,6 +6,7 @@ import umap.umap_ as umap
 import seaborn as sns
 sns.set()
 import streamlit as st
+import pickle
 
 hru=pd.read_csv("hru.csv")
 
