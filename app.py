@@ -33,12 +33,12 @@ st.markdown(hide_st_style, unsafe_allow_html=True)
 def read_objects():
     model_xgb = pickle.load(open('model_xgb.pkl','rb'))
     scaler = pickle.load(open('scaler.pkl','rb'))
-    ohe = pickle.load(open('ohe.pkl','rb'))
+    ohe_pkl = pickle.load(open('ohe.pkl','rb'))
     shap_values = pickle.load(open('shap_values.pkl','rb'))
     cats = list(itertools.chain(*ohe.categories_))
     return model_xgb, scaler, ohe, cats, shap_values
 
-model_xgb, scaler, ohe, cats, shap_values = read_objects()
+model_xgb, scaler, ohe_pkl, cats, shap_values = read_objects()
 
 
 # ---- DEFINE EXPLAINER ----
