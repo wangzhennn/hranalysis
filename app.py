@@ -77,27 +77,20 @@ if st.button('Predict! 🚀'):
                                'wlb':wlb}, index=[0])
             new_values_num = pd.DataFrame(scaler.transform(new_df_num), columns = new_df_num.columns, index=[0])  
             
-            # make a DF for categories and transform with one-hot-encoder
             new_df_cat = pd.DataFrame({'buiness_travel':buiness_travel,
                                'gender':gender,
                                'job_role':job_role,
                                'marital':marital}, index=[0])
             ohe = OneHotEncoder(max_categories=18, sparse=False).fit(new_df_cat)
             new_values_cat = pd.DataFrame(ohe.fit_transform(new_df_cat),columns=cats,index=[0])
-            
-            #bring all columns togethe
-            line_to_pred = pd.concat([new_values_num, new_values_cat], axis=1)
 
-            #run prediction for 1 new observation
-            predicted_value = model_xgb.predict(line_to_pred)[0]
+line_to_pred = pd.concat([new_values_num, new_values_cat], axis=1)
+predicted_value = model_xgb.predict(line_to_pred)[0]
 
-            #print out result to user
-            st.metric(label="Predicted Income", value=f'{round(predicted_value)} ')
-    
-            #print SHAP explainer to user
-            st.subheader(f'Wait, why {round(predicted_value)} kr? Explain, AI 🤖:')
-            shap_value = explainer.shap_values(line_to_pred)
-            st_shap(shap.force_plot(explainer.expected_value, shap_value, line_to_pred), height=400, width=500)
+st.metric(label="Predicted Income", value=f'{round(predicted_value)} ')
+
+st.subheader(f'Wait, why {round(predicted_value)} kr? Explain, AI 🤖:')
+st_shap(shap.force_plot(explainer.expected_value, shap_value, line_to_pred), height=400, width=500)
 
 
 
