@@ -33,7 +33,7 @@ st.markdown(hide_st_style, unsafe_allow_html=True)
 def read_objects():
     model_xgb = pickle.load(open('model_xgb.pkl','rb'))
     scaler = pickle.load(open('scaler.pkl','rb'))
-    ohe_pkl = pickle.load(open('ohe.pkl','rb'))
+    ohe = pickle.load(open('ohe.pkl','rb'))
     shap_values = pickle.load(open('shap_values.pkl','rb'))
     cats = list(itertools.chain(*ohe.categories_))
     return model_xgb, scaler, ohe, cats, shap_values
@@ -81,7 +81,7 @@ if st.button('Predict! 🚀'):
                                'gender':gender,
                                'job_role':job_role,
                                'marital':marital}, index=[0])
-            new_values_cat = pd.DataFrame(ohe.transform(new_df_cat),columns=cats,index=[0])
+            new_values_cat = pd.DataFrame(ohe_pkl.transform(new_df_cat),columns=cats,index=[0])
             
             line_to_pred = pd.concat([new_values_num, new_values_cat], axis=1)
             predicted_value = model_xgb.predict(line_to_pred)[0]
