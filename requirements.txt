@@ -9,5 +9,4 @@ streamlit_shap
 xgboost
 matplotlib
 umap-learn
-seaborn
 pickle
