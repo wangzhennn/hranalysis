@@ -84,10 +84,8 @@ if st.button('Predict! 🚀'):
                                'marital':marital}, index=[0])
             ohe = OneHotEncoder(max_categories=18, sparse=False).fit(new_df_cat)
             new_values_cat = pd.DataFrame(ohe.fit_transform(new_df_cat),columns=cats,index=[0])
-
             
-    
-            #bring all columns together
+            #bring all columns togethe
             line_to_pred = pd.concat([new_values_num, new_values_cat], axis=1)
 
             #run prediction for 1 new observation
