@@ -76,7 +76,7 @@ if st.button('Predict! 🚀'):
                                'job_involvement':job_involvement,
                                'satisfaction_job':satisfaction_job,
                                'wlb':wlb}, index=[0])
-            new_values_num = pd.DataFrame(scaler.transform(new_df_num), columns = new_df_num.columns, index=[0])  
+            new_values_num = pd.DataFrame(scaler.transform(new_df_num), columns =new_df_num.columns, index=[0])  
             
             new_df_cat = pd.DataFrame({'buiness_travel':buiness_travel,
                                'gender':gender,
