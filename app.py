@@ -95,15 +95,7 @@ if st.button('Predict! 🚀'):
     st_shap(shap.force_plot(explainer.expected_value, shap_value, line_to_pred), height=400, width=500)
 
 
-def predict():
-            row=np.array([,])
-            prediction=model.predict(X)[0]
-            
-            if prediction ==1:
-                        st.success('')
-            else:
-                        st.error('')
-st.button('Predict',on_click=predict)
+
 
 
 
