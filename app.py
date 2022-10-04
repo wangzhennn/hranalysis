@@ -83,14 +83,12 @@ if st.button('Predict! 🚀'):
                                'marital':marital}, index=[0])
             ohe = OneHotEncoder(max_categories=18, sparse=False).fit(new_df_cat)
             new_values_cat = pd.DataFrame(ohe.fit_transform(new_df_cat),columns=cats,index=[0])
-
-line_to_pred = pd.concat([new_values_num, new_values_cat], axis=1)
-predicted_value = model_xgb.predict(line_to_pred)[0]
-
-st.metric(label="Predicted Income", value=f'{round(predicted_value)} ')
-
-st.subheader(f'Wait, why {round(predicted_value)} kr? Explain, AI 🤖:')
-st_shap(shap.force_plot(explainer.expected_value, shap_value, line_to_pred), height=400, width=500)
+            
+            line_to_pred = pd.concat([new_values_num, new_values_cat], axis=1)
+            predicted_value = model_xgb.predict(line_to_pred)[0]
+            st.metric(label="Predicted Income", value=f'{round(predicted_value)} ')
+            st.subheader(f'Wait, why {round(predicted_value)} kr? Explain, AI 🤖:')
+            st_shap(shap.force_plot(explainer.expected_value, shap_value, line_to_pred), height=400, width=500)
 
 
 
