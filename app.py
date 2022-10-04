@@ -5,7 +5,7 @@ import altair as alt
 import umap.umap_ as umap
 import seaborn as sns
 sns.set()
-import steamlit as st
+import streamlit as st
 
 hru=pd.read_csv("hru.csv")
 
