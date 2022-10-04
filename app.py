@@ -56,10 +56,10 @@ performance=st.select_slider('Expected Performance',[1,2,3,4,5])
 job_involvement=st.select_slider('Expected Job Involvement',[1,2,3,4,5])
 satisfaction_job=st.select_slider('Expected Job Satisfaction',[1,2,3,4,5])
 wlb=st.select_slider('Expected Work Life Balance',[1,2,3,4,5])
-buiness_travel=st.selectbox('buiness_travel',options=ohe.categories_[0])
-gender=st.selectbox('gender',options=ohe.categories_[1])
-job_role=st.selectbox('job_role',options=ohe.categories_[2])
-marital=st.selectbox('marital',options=ohe.categories_[3])
+buiness_travel=st.selectbox('buiness_travel',options=ohe_pkl.categories_[0])
+gender=st.selectbox('gender',options=ohe_pkl.categories_[1])
+job_role=st.selectbox('job_role',options=ohe_pkl.categories_[2])
+marital=st.selectbox('marital',options=ohe_pkl.categories_[3])
 
 # make a nice button that triggers creation of a new data-line in the format that the model expects and prediction
 if st.button('Predict! 🚀'):
