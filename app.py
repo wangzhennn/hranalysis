@@ -38,7 +38,7 @@ explainer = shap.TreeExplainer(model_xgb)
 
 # ---- COLLECT INPUT FROM USER ----
 age=st.number_input('Age',0,100)
-dfh=st.select_slider('Distance From Home To Company (km)',[1:500])
+dfh=st.number_input('Distance From Home To Company (km)',0,500)
 edu=st.select_slider('Education Level',[1,2,3,4,5])
 stock_option=st.select_slider('Expected Stock Option Level',[1,2,3,4,5])
 training=st.number_input('Expected Training Times per yer',0,100)
