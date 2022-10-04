@@ -82,7 +82,7 @@ if st.button('Predict! 🚀'):
                                'gender':gender,
                                'job_role':job_role,
                                'marital':marital}, index=[0])
-            ohe = OneHotEncoder(max_categories=3, sparse=False).fit(new_df_cat)
+            ohe = OneHotEncoder(max_categories=18, sparse=False).fit(new_df_cat)
             new_values_cat = pd.DataFrame(ohe.fit_transform(new_df_cat),columns=cats,index=[0])
 
             
