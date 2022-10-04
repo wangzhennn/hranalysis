@@ -82,7 +82,6 @@ if st.button('Predict! 🚀'):
                                'gender':gender,
                                'job_role':job_role,
                                'marital':marital}, index=[0])
-            ohe = OneHotEncoder(sparse=False).fit(new_df_cat)
             new_values_cat = pd.DataFrame(ohe_pkl.transform(new_df_cat),columns=cats,index=[0])
             new_values_cat = pd.DataFrame(columns=['Non-Travel','Travel_Frequently','Travel_Rarely','Female','Male','Healthcare Representative','Human Resources','Laboratory Technician','Manager','Manufacturing Director','Research Director','Research Scientist','Sales Executive','Sales Representative','Divorced','Marries','Single'],dtype='object')
             print(new_values_cat)
