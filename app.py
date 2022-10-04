@@ -55,11 +55,9 @@ job_involvement=st.select_slider('Expected Job Involvement',[1,2,3,4,5])
 satisfaction_job=st.select_slider('Expected Job Satisfaction',[1,2,3,4,5])
 wlb=st.select_slider('Expected Work Life Balance',[1,2,3,4,5])
 buiness_travel=st.selectbox('buiness_travel',options=ohe.categories_[0])
-department=st.selectbox('department',options=ohe.categories_[1])
-edu_field=st.selectbox('edu_field',options=ohe.categories_[2])
-gender=st.selectbox('gender',options=ohe.categories_[3])
-job_role=st.selectbox('job_role',options=ohe.categories_[4])
-marital=st.selectbox('marital',options=ohe.categories_[5])
+gender=st.selectbox('gender',options=ohe.categories_[1])
+job_role=st.selectbox('job_role',options=ohe.categories_[2])
+marital=st.selectbox('marital',options=ohe.categories_[3])
 
 # make a nice button that triggers creation of a new data-line in the format that the model expects and prediction
 if st.button('Predict! 🚀'):
@@ -79,8 +77,6 @@ if st.button('Predict! 🚀'):
             
             # make a DF for categories and transform with one-hot-encoder
             new_df_cat = pd.DataFrame({'buiness_travel':buiness_travel,
-                               'department':department,
-                               'edu_field':edu_field,
                                'gender':gender,
                                'job_role':job_role,
                                'marital':marital}, index=[0])
