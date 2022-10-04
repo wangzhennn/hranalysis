@@ -36,6 +36,7 @@ def read_objects():
     ohe_pkl = pickle.load(open('ohe.pkl','rb'))
     shap_values = pickle.load(open('shap_values.pkl','rb'))
     cats = list(itertools.chain(*ohe_pkl.categories_))
+    print(len(cats))
     return model_xgb, scaler, ohe_pkl, cats, shap_values
 
 model_xgb, scaler, ohe_pkl, cats, shap_values = read_objects()
