@@ -83,9 +83,10 @@ if st.button('Predict! 🚀'):
                                'job_role':job_role,
                                'marital':marital}, index=[0])
             ohe = OneHotEncoder(sparse=False).fit(new_df_cat)
-            new_values_cat = pd.DataFrame(ohe_pkl.transform(new_df_cat),columns=cats,index=[0])
-            new_values_cat.columns.to_list()
             new_values_cat = pd.DataFrame(columns=[])
+            new_values_cat = pd.DataFrame(ohe_pkl.transform(new_df_cat),columns=cats,index=[0])
+            print(new_values_cat.columns.to_list())
+            
                         
             line_to_pred = pd.concat([new_values_num, new_values_cat], axis=1)
             predicted_value = model_xgb.predict(line_to_pred)[0]
