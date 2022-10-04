@@ -39,6 +39,7 @@ def read_objects():
 
 model_xgb, scaler, ohe, cats, shap_values = read_objects()
 
+
 # ---- DEFINE EXPLAINER ----
 explainer = shap.TreeExplainer(model_xgb)
 
@@ -80,6 +81,7 @@ if st.button('Predict! 🚀'):
                                'gender':gender,
                                'job_role':job_role,
                                'marital':marital}, index=[0])
+            ohe = OneHotEncoder(max_categories=3, sparse=False).fit(new_df_cat)
             new_values_cat = pd.DataFrame(ohe.fit_transform(new_df_cat),columns=cats,index=[0])
 
             
