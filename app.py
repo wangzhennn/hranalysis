@@ -26,3 +26,34 @@ name=st.text_input('Name','Zhen Wang')
 st.select_slider('Choose',[1,2,3,4,5])
 age=st.number_input('Age',0,100)
 sc=st.selectbox('sc',["S","C"])
+
+
+def predict():
+            row=np.array([,])
+            prediction=model.predict(X)[0]
+            
+            if prediction ==1:
+                        st.success('')
+            else:
+                        st.error('')
+st.button('Predict',on_click=predict)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
