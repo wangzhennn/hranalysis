@@ -18,6 +18,7 @@ hru=pd.read_csv("hru.csv")
 
 st.title('Predict Your Income in Company X')
 
+st.sidebar.success("Select a page above")
 
 # ---- HIDE STREAMLIT STYLE ----
 hide_st_style = """
