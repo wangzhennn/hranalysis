@@ -27,7 +27,7 @@ PROJECTS=st.session_state["my_input_3"]
 # --- BASIC INFO ---
 col1, col2 = st.columns(2, gap="small")
 with col1:
-    st.title(NAME)
+    st.image(https://images.unsplash.com/photo-1517849845537-4d257902454a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80,width=230)
 
 with col2:
     st.title(NAME)
