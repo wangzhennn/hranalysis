@@ -157,14 +157,15 @@ my_input = st.text_input("Name", st.session_state["my_input"])
 my_input_1 = st.text_input("Discription", st.session_state["my_input_1"])
 my_input_2 = st.text_input("Email", st.session_state["my_input_2"])
 my_input_3 = st.text_input("Project Experience", st.session_state["my_input_3"])
+with st.expander("Tips for experience writing"):
+    st.markdown("""
+    Remember to use short sentence and try to use STAR (situation-target-ation-result) to describe your previous experience. However, don't write too much here because there is no real HR to view your digital resumer here.
+    """)
 my_input_4 = st.text_input("Most Recent Work Experience (1/2)", st.session_state["my_input_4"])
 my_input_5 = st.text_input("Most Recent Work Experience (2/2)", st.session_state["my_input_5"])
 my_input_6 = st.text_input("Skills", st.session_state["my_input_6"])
 
-with st.expander("Tips for experience writing"):
-    st.markdown("""
-    Remember to use short sentence and try to use STAR (situation-target-ation-result) to describe your previous experience. Feel free to use emoji here.
-    """)
+
 submit=st.button("create digital resume")
 if submit:
     st.session_state["my_input"]=my_input
