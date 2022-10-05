@@ -121,6 +121,7 @@ if st.button('Calaulate'):
             line_to_pred = pd.concat([new_values_num, new_values_cat], axis=1)
             predicted_value = model_xgb.predict(line_to_pred)[0]
             st.metric(label="Predicted Income", value=f'{round(predicted_value)} Ruppes per month' )
+            SOCIAL_MEDIA = {"Echange Rate": "https://www.xe.com/currencyconverter/"}
             with st.expander("Explaination for Prediction"):
                 st.markdown("""
                 The outcome is calculated on the basis of supervised machine learning technology, predicting potential income based on the current employees' feature data and your input. The model will be continuously optimized to reduce MSE in the future.
