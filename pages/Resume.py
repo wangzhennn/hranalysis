@@ -37,7 +37,7 @@ st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON)
 # --- HERO SECTION ---
 col1, col2 = st.columns(2, gap="small")
 with col1:
-    st.image(profile_pic, width=230)
+    st.title(NAME)
 
 with col2:
     st.title(NAME)
