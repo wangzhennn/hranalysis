@@ -10,15 +10,6 @@ css_file = current_dir / "styles" / "main.css"
 
 
 # --- GENERAL SETTINGS ---
-PAGE_TITLE = "Digital CV | John Doe"
-PAGE_ICON = ":wave:"
-EMAIL = "johndoe@email.com"
-PROJECTS = {
-    "🏆 Income and Expense Tracker - Web app with NoSQL database": "https://youtu.be/3egaMfE9388",
-    "🏆 Desktop Application - Excel2CSV converter with user settings & menubar": "https://youtu.be/LzCfNanQ_9c",
-    "🏆 MyToolBelt - Custom MS Excel add-in to combine Python & Excel": "https://pythonandvba.com/mytoolbelt/",
-}
-
 if "my_input" not in st.session_state:
     st.session_state["my_input"]=""
 NAME=st.session_state["my_input"]
@@ -26,6 +17,14 @@ NAME=st.session_state["my_input"]
 if "my_input_1" not in st.session_state:
     st.session_state["my_input_1"]=""
 DESCRIPTION=st.session_state["my_input_1"]
+
+if "my_input_2" not in st.session_state:
+    st.session_state["my_input_2"]=""
+EMAIL=st.session_state["my_input_2"]
+
+if "my_input_3" not in st.session_state:
+    st.session_state["my_input_3"]=""
+PROJECTS=st.session_state["my_input_3"]
 
 
 # --- HERO SECTION ---
@@ -35,27 +34,21 @@ with col1:
 
 with col2:
     st.title(NAME)
-    st.write(DESCRIPTION)
+    st.write("📒",DESCRIPTION)
     st.write("📫", EMAIL)
-
-
-
 
 # --- EXPERIENCE & QUALIFICATIONS ---
 st.write('\n')
-st.subheader("Experience & Qulifications")
-st.write(
-    """
-- ✔️ 7 Years expereince extracting actionable insights from data
-- ✔️ Strong hands on experience and knowledge in Python and Excel
-- ✔️ Good understanding of statistical principles and their respective applications
-- ✔️ Excellent team-player and displaying strong sense of initiative on tasks
-"""
-)
+st.subheader("Experience（1/2）")
+if "my_input_4" not in st.session_state:
+    st.session_state["my_input_4"]=""
+st.write(st.session_state["my_input_4"])
 
-
-
-
+st.write('\n')
+st.subheader("Experience（2/2）")
+if "my_input_5" not in st.session_state:
+    st.session_state["my_input_5"]=""
+st.write(st.session_state["my_input_5"])
 
 # --- SKILLS ---
 st.write('\n')
