@@ -46,10 +46,15 @@ model_xgb, scaler, ohe_pkl, cats, shap_values = read_objects()
 explainer = shap.TreeExplainer(model_xgb)
 
 # ---- COLLECT INPUT FROM USER ----
-job_role=st.selectbox('Expected Job Role',options=ohe_pkl.categories_[2])
+job_role=st.selectbox('Expected Job Position',options=ohe_pkl.categories_[2])
 age=st.number_input('Age',0,100)
-dfh=st.number_input('Distance From Home to Company (km)',0,500)
+dfh=st.number_input('Distance From Home to Company (KM)',0,500)
 edu=st.select_slider('Education Level',[1,2,3,4,5])
+
+with st.expander("What's Education Level?"):
+    st.markdown("""
+    1-Below College, 2-College, 3-Bachelor, 4-Master, 5-Doctor
+    """)
 stock_option=st.select_slider('Expected Stock Option Level',[1,2,3,4,5])
 training=st.number_input('Expected Training Times per year',0,100)
 years_working=st.number_input('Years of Working Before',0,100)
