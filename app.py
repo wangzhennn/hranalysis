@@ -135,7 +135,7 @@ if st.button('Calaulate'):
             shap_value = explainer.shap_values(line_to_pred)
             st_shap(shap.force_plot(explainer.expected_value, shap_value, line_to_pred), height=400, width=500)
             
-            st.subheader(f'Heartbeat?  Create Digital Resume RIGHT NOW')
+st.subheader(f'Heartbeat?  Create Digital Resume RIGHT NOW')
 
 # ---- LINK TO RESUME ----
 if "my_input" not in st.session_state:
