@@ -144,15 +144,23 @@ if "my_input_1" not in st.session_state:
     st.session_state["my_input_1"]=""
 if "my_input_2" not in st.session_state:
     st.session_state["my_input_2"]=""
+if "my_input_3" not in st.session_state:
+    st.session_state["my_input_3"]=""
 
 my_input = st.text_input("Name", st.session_state["my_input"])
 my_input_1 = st.text_input("Discription", st.session_state["my_input_1"])
 my_input_2 = st.text_input("Email", st.session_state["my_input_2"])
+my_input_3 = st.text_input("Project Experience", st.session_state["my_input_3"])
+with st.expander("Tips for experience writing"):
+    st.markdown("""
+    Remember to use short sentence to describe your previous experience. You can also consider to use the STAR principle to make your description logical.
+    """)
 submit=st.button("create digital resume")
 if submit:
     st.session_state["my_input"]=my_input
     st.session_state["my_input_1"]=my_input_1
     st.session_state["my_input_2"]=my_input_2
+    st.session_state["my_input_3"]=my_input_3
 
 
 
