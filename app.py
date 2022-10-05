@@ -121,27 +121,27 @@ if st.button('Calaulate'):
             line_to_pred = pd.concat([new_values_num, new_values_cat], axis=1)
             predicted_value = model_xgb.predict(line_to_pred)[0]
             st.metric(label="Predicted Income", value=f'{round(predicted_value)} Ruppes' )
-            
-            shap_value = explainer.shap_values(line_to_pred)
-            st_shap(shap.force_plot(explainer.expected_value, shap_value, line_to_pred), height=400, width=500)
             with st.expander("Explaination for Prediction"):
                 st.markdown("""
-                The out is based on supervised machine learning technology, predicting potential income based on the current employees' features and your input
+                The outcome is calculated on the basis of supervised machine learning technology, predicting potential income based on the current employees' feature data and your input. The model will be continuously optimized to reduce MSE in the future.
                 """)
+            shap_value = explainer.shap_values(line_to_pred)
+            st_shap(shap.force_plot(explainer.expected_value, shap_value, line_to_pred), height=400, width=500)
+            
             st.subheader(f'Heartbeat? Create Digital Resume Right Now')
 
-# ---- LINK TO RESUME ----
-if "my_input" not in st.session_state:
-    st.session_state["my_input"]=""
-if "my_input_1" not in st.session_state:
-    st.session_state["my_input_1"]=""
-    
-my_input = st.text_input("Name", st.session_state["my_input"])
-my_input_1 = st.text_input("occu", st.session_state["my_input_1"])
-submit=st.button("create digital resume")
-if submit:
-    st.session_state["my_input"]=my_input
-    st.session_state["my_input_1"]=my_input_1
+            # ---- LINK TO RESUME ----
+            if "my_input" not in st.session_state:
+                st.session_state["my_input"]=""
+            if "my_input_1" not in st.session_state:
+                st.session_state["my_input_1"]=""
+
+            my_input = st.text_input("Name", st.session_state["my_input"])
+            my_input_1 = st.text_input("occu", st.session_state["my_input_1"])
+            submit=st.button("create digital resume")
+            if submit:
+                st.session_state["my_input"]=my_input
+                st.session_state["my_input_1"]=my_input_1
 
 
 
