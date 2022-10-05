@@ -109,7 +109,7 @@ if st.button('Predict! 🚀'):
             predicted_value = model_xgb.predict(line_to_pred)[0]
             st.metric(label="Predicted Income", value=f'{round(predicted_value)} ')
             st.subheader(f'Wait, why {round(predicted_value)} kr? Explain, AI 🤖:')
-            st_shap(shap.force_plot(explainer.expected_value, shap_value, line_to_pred), height=400, width=500)
+            st_shap(shap.force_plot(explainer.expected_value, shap_values, line_to_pred), height=400, width=500)
 
 
 
