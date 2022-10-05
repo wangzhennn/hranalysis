@@ -16,7 +16,7 @@ from sklearn.preprocessing import OneHotEncoder
 
 hru=pd.read_csv("hru.csv")
 
-st.title('Predict Your Income in Company X💰')
+st.title('Predict Your Income in Company X')
 
 # ---- HIDE STREAMLIT STYLE ----
 hide_st_style = """
@@ -47,8 +47,8 @@ explainer = shap.TreeExplainer(model_xgb)
 
 # ---- COLLECT INPUT FROM USER ----
 age=st.number_input('Age',0,100)
-dfh=st.number_input('Distance From Home To Company (km)',0,500)
-edu=st.select_slider('Education Level',[1,2,3,4,5])
+dfh=st.number_input('Distance From Home to Company (km)',0,500)
+edu=st.select_slider('Education Level',[a,b,c,d,e])
 stock_option=st.select_slider('Expected Stock Option Level',[1,2,3,4,5])
 training=st.number_input('Expected Training Times per year',0,100)
 years_working=st.number_input('Years of Working Before',0,100)
