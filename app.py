@@ -82,11 +82,12 @@ if st.button('Predict! 🚀'):
                                'gender':gender,
                                'job_role':job_role,
                                'marital':marital}, index=[0])
-            new_values_cat = pd.DataFrame(ohe_pkl.transform(new_df_cat),columns=cats,index=[0])
             new_values_cat = pd.DataFrame(columns=['Non-Travel','Travel_Frequently','Travel_Rarely','Female','Male','Healthcare Representative','Human Resources','Laboratory Technician','Manager','Manufacturing Director','Research Director','Research Scientist','Sales Executive','Sales Representative','Divorced','Marries','Single'],dtype='object')
-            print(new_values_cat)
-            
-                        
+            new_values_cat[business_travel] = business_travel
+            new_values_cat[gender] = gender
+            new_values_cat[job_role] = job_role
+            new_values_cat[marital] = marital
+
             line_to_pred = pd.concat([new_values_num, new_values_cat], axis=1)
             predicted_value = model_xgb.predict(line_to_pred)[0]
             st.metric(label="Predicted Income", value=f'{round(predicted_value)} ')
