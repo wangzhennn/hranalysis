@@ -51,14 +51,13 @@ age=st.number_input('Age',0,100)
 gender=st.selectbox('Gender',options=ohe_pkl.categories_[1])
 marital=st.selectbox('Marital Situation',options=ohe_pkl.categories_[3])
 edu=st.select_slider('Education Level',[1,2,3,4,5])
-dfh=st.number_input('Distance From Home to Company (KM)',0,500)
-num_companiesworked=st.number_input('Total Number of Companies You Have Been Worked',0,100)
-years_working=st.number_input('Years of Working Before',0,100)
-
 with st.expander("What's Education Level?"):
     st.markdown("""
     1-Below College / 2-College / 3-Bachelor / 4-Master / 5-Doctor
     """)
+dfh=st.number_input('Distance From Home to Company (KM)',0,500)
+num_companiesworked=st.number_input('Total Number of Companies You Have Been Worked',0,100)
+years_working=st.number_input('Years of Working Before',0,100)
 stock_option=st.select_slider('Expected Stock Option Level',[1,2,3,4,5])
 training=st.number_input('Expected Training Times per year',0,100)
 
