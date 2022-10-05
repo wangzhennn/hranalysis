@@ -36,7 +36,7 @@ with col2:
 
 # --- PROJECT ---
 st.write('\n')
-st.subheader("Project")
+st.subheader("Project Experience")
 if "my_input_3" not in st.session_state:
     st.session_state["my_input_3"]=""
 st.write("🏆",st.session_state["my_input_3"])
@@ -44,7 +44,7 @@ st.write("🏆",st.session_state["my_input_3"])
 
 # --- EXPERIENCE & QUALIFICATIONS ---
 st.write('\n')
-st.subheader("Working History")
+st.subheader("Working History (1/2)")
 if "my_input_4" not in st.session_state:
     st.session_state["my_input_4"]=""
 st.write("💼",st.session_state["my_input_4"])
@@ -62,7 +62,7 @@ if "my_input_7" not in st.session_state:
 st.write("🌟",st.session_state["my_input_7"])
 
 st.write('\n')
-st.subheader("Working History")
+st.subheader("Working History (2/2)")
 if "my_input_8" not in st.session_state:
     st.session_state["my_input_8"]=""
 st.write("💼",st.session_state["my_input_8"])
