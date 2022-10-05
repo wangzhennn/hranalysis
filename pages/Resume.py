@@ -42,10 +42,6 @@ with col1:
 with col2:
     st.title(NAME)
     st.write(DESCRIPTION)
-    st.download_button(
-        label=" 📄 Download Resume",
-        file_name=resume_file.name,
-    )
     st.write("📫", EMAIL)
 
 
