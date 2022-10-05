@@ -28,9 +28,6 @@ if "my_input_1" not in st.session_state:
 DESCRIPTION=st.write("you have entered", st.session_state["my_input_1"])
 
 
-st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON)
-
-
 # --- HERO SECTION ---
 col1, col2 = st.columns(2, gap="small")
 with col1:
