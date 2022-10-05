@@ -107,7 +107,7 @@ if st.button('Calaulate'):
 
             line_to_pred = pd.concat([new_values_num, new_values_cat], axis=1)
             predicted_value = model_xgb.predict(line_to_pred)[0]
-            st.metric(label="Predicted Income", value=f'{round(predicted_value)}' Rupees)
+            st.metric(label="Predicted Income", value=f'{round(predicted_value)} Ruppes' )
            
 
 
