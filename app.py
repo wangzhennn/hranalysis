@@ -53,7 +53,7 @@ edu=st.select_slider('Education Level',[1,2,3,4,5])
 
 with st.expander("What's Education Level?"):
     st.markdown("""
-    1-Below College, 2-College, 3-Bachelor, 4-Master, 5-Doctor
+    1-Below College / 2-College / 3-Bachelor / 4-Master / 5-Doctor
     """)
 stock_option=st.select_slider('Expected Stock Option Level',[1,2,3,4,5])
 training=st.number_input('Expected Training Times per year',0,100)
