@@ -14,6 +14,10 @@ from sklearn.preprocessing import StandardScaler
 from xgboost import XGBRegressor
 from sklearn.preprocessing import OneHotEncoder
 
+st.set_page_config(
+    page_title="Airbnb Price Prediction",
+    page_icon="💸")
+
 hru=pd.read_csv("hru.csv")
 
 st.title('Predict Your Income in Company X')
