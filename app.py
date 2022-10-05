@@ -15,8 +15,8 @@ from xgboost import XGBRegressor
 from sklearn.preprocessing import OneHotEncoder
 
 st.set_page_config(
-    page_title="Airbnb Price Prediction",
-    page_icon="💸")
+    page_title="HR Analysis",
+    page_icon="🔍")
 
 hru=pd.read_csv("hru.csv")
 
