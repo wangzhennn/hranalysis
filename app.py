@@ -125,9 +125,10 @@ if st.button('Calaulate'):
 
             st.markdown("""---""")
 
-st.session_state["my_input"]=""
+if "my_input" not in st.session_state:
+    st.session_state["my_input"]=""
 
-
+my_input = st.text_input("Input a text here", st.session_state["my_input"])
 
 
 
