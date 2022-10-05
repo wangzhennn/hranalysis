@@ -32,7 +32,7 @@ hide_st_style = """
             """
 st.markdown(hide_st_style, unsafe_allow_html=True)
 
-
+st.image('https://images.unsplash.com/photo-1633158829585-23ba8f7c8caf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80', caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
 
 # ---- READ PREPROCESSED MODEL ----
 @st.experimental_singleton
