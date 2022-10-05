@@ -63,7 +63,8 @@ st.write(
 - ✔️ Excellent team-player and displaying strong sense of initiative on tasks
 """
 )
-
+if "my_input" not in st.session_state:
+    st.session_state["my_input"]=""
 st.write("you have entered", st.session_state["my_input"])
 # --- SKILLS ---
 st.write('\n')
