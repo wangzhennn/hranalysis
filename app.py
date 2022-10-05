@@ -146,6 +146,12 @@ if "my_input_2" not in st.session_state:
     st.session_state["my_input_2"]=""
 if "my_input_3" not in st.session_state:
     st.session_state["my_input_3"]=""
+if "my_input_4" not in st.session_state:
+    st.session_state["my_input_4"]=""
+if "my_input_5" not in st.session_state:
+    st.session_state["my_input_5"]=""
+if "my_input_6" not in st.session_state:
+    st.session_state["my_input_6"]=""
 
 my_input = st.text_input("Name", st.session_state["my_input"])
 my_input_1 = st.text_input("Discription", st.session_state["my_input_1"])
