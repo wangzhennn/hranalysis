@@ -119,6 +119,9 @@ if st.button('Calaulate'):
             line_to_pred = pd.concat([new_values_num, new_values_cat], axis=1)
             predicted_value = model_xgb.predict(line_to_pred)[0]
             st.metric(label="Predicted Income", value=f'{round(predicted_value)} Ruppes' )
+            
+            shap_value = explainer.shap_values(line_to_pred)
+            st_shap(shap.force_plot(explainer.expected_value, shap_value, line_to_pred), height=400, width=500)
            
 
 
