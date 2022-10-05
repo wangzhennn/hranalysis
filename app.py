@@ -83,10 +83,24 @@ if st.button('Predict! 🚀'):
                                'job_role':job_role,
                                'marital':marital}, index=[0])
             new_values_cat = pd.DataFrame(columns=['Non-Travel','Travel_Frequently','Travel_Rarely','Female','Male','Healthcare Representative','Human Resources','Laboratory Technician','Manager','Manufacturing Director','Research Director','Research Scientist','Sales Executive','Sales Representative','Divorced','Marries','Single'],dtype='object')
-            new_values_cat[business_travel] = business_travel
-            new_values_cat[gender] = gender
-            new_values_cat[job_role] = job_role
-            new_values_cat[marital] = marital
+            new_values_cat['Non-Travel'] = 0
+            new_values_cat['Travel_Frequently'] = 0
+            new_values_cat['Travel_Rarely'] = 0
+            new_values_cat['Female'] = 0
+            new_values_cat['Male'] = 0
+            new_values_cat['Healthcare Representative'] = 0
+            new_values_cat['Human Resources'] = 0
+            new_values_cat['Laboratory Technician'] = 0
+            new_values_cat['Manager'] = 0
+            new_values_cat['Manufacturing Director'] = 0
+            new_values_cat['Research Director'] = 0
+            new_values_cat['Research Scientist'] = 0
+            new_values_cat['Sales Executive'] = 0
+            new_values_cat['Sales Representative'] = 0
+            new_values_cat[business_travel] = 1
+            new_values_cat[gender] = 1
+            new_values_cat[job_role] = 1
+            new_values_cat[marital] = 1
 
             line_to_pred = pd.concat([new_values_num, new_values_cat], axis=1)
             predicted_value = model_xgb.predict(line_to_pred)[0]
