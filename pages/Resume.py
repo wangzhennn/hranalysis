@@ -63,9 +63,17 @@ st.write(
 - ✔️ Excellent team-player and displaying strong sense of initiative on tasks
 """
 )
+
+
+
 if "my_input" not in st.session_state:
     st.session_state["my_input"]=""
 st.write("you have entered", st.session_state["my_input"])
+
+if "my_input_1" not in st.session_state:
+    st.session_state["my_input_1"]=""
+st.write("you have entered", st.session_state["my_input_1"])
+
 # --- SKILLS ---
 st.write('\n')
 st.subheader("Hard Skills")
