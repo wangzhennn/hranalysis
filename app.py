@@ -82,7 +82,7 @@ if st.button('Predict! 🚀'):
                                'gender':gender,
                                'job_role':job_role,
                                'marital':marital}, index=[0])
-            new_values_cat = pd.DataFrame(columns=['Non-Travel','Travel_Frequently','Travel_Rarely','Female','Male','Healthcare Representative','Human Resources','Laboratory Technician','Manager','Manufacturing Director','Research Director','Research Scientist','Sales Executive','Sales Representative','Divorced','Marries','Single'],dtype='object')
+            new_values_cat = pd.DataFrame(columns=['Non-Travel','Travel_Frequently','Travel_Rarely','Female','Male','Healthcare Representative','Human Resources','Laboratory Technician','Manager','Manufacturing Director','Research Director','Research Scientist','Sales Executive','Sales Representative','Divorced','Married','Single'],dtype='object')
             new_values_cat['Non-Travel'] = 0
             new_values_cat['Travel_Frequently'] = 0
             new_values_cat['Travel_Rarely'] = 0
