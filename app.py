@@ -46,6 +46,7 @@ model_xgb, scaler, ohe_pkl, cats, shap_values = read_objects()
 explainer = shap.TreeExplainer(model_xgb)
 
 # ---- COLLECT INPUT FROM USER ----
+job_role=st.selectbox('Expected Job Role',options=ohe_pkl.categories_[2])
 age=st.number_input('Age',0,100)
 dfh=st.number_input('Distance From Home to Company (km)',0,500)
 edu=st.select_slider('Education Level',[1,2,3,4,5])
@@ -59,7 +60,6 @@ satisfaction_job=st.select_slider('Expected Job Satisfaction',[1,2,3,4,5])
 wlb=st.select_slider('Expected Work Life Balance',[1,2,3,4,5])
 business_travel=st.selectbox('Expected Business Travel Frequency',options=ohe_pkl.categories_[0])
 gender=st.selectbox('Gender',options=ohe_pkl.categories_[1])
-job_role=st.selectbox('Expected Job Role',options=ohe_pkl.categories_[2])
 marital=st.selectbox('Marital Situation',options=ohe_pkl.categories_[3])
 
 # make a nice button that triggers creation of a new data-line in the format that the model expects and prediction
