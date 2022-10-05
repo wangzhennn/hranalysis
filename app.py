@@ -169,25 +169,25 @@ if "my_input_13" not in st.session_state:
 if "my_input_14" not in st.session_state:
     st.session_state["my_input_14"]=""
 
-my_input = st.text_input("Name", st.session_state["my_input"])
-my_input_1 = st.text_input("Discription", st.session_state["my_input_1"])
-my_input_2 = st.text_input("Email", st.session_state["my_input_2"])
-my_input_3 = st.text_input("Project Experience", st.session_state["my_input_3"])
+my_input = st.text_input("👤 Name", st.session_state["my_input"])
+my_input_1 = st.text_input("📖 Discription", st.session_state["my_input_1"])
+my_input_2 = st.text_input("📮 Email", st.session_state["my_input_2"])
+my_input_3 = st.text_input("🏆 Project Experience", st.session_state["my_input_3"])
 with st.expander("Tips for experience writing"):
     st.markdown("""
     Remember to use short sentence and try to use STAR (situation-target-ation-result) to describe your previous experience.
     """)
-my_input_4 = st.text_input("💼Most Recent Work Experience (1/2): Job Title", st.session_state["my_input_4"])
-my_input_5 = st.text_input("Most Recent Work Experience (1/2): Time Duration", st.session_state["my_input_5"])
-my_input_6 = st.text_input("Most Recent Work Experience (1/2): Key Outcome (1/2)", st.session_state["my_input_6"])
-my_input_7 = st.text_input("Most Recent Work Experience (1/2): Key Outcome (2/2)", st.session_state["my_input_7"])
-my_input_8 = st.text_input("Most Recent Work Experience (2/2): Job Title", st.session_state["my_input_8"])
-my_input_9 = st.text_input("Most Recent Work Experience (2/2): Time Duration", st.session_state["my_input_9"])
-my_input_10 = st.text_input("Most Recent Work Experience (2/2): Key Outcome (1/2)", st.session_state["my_input_10"])
-my_input_11 = st.text_input("Most Recent Work Experience (2/2): Key Outcome (2/2)", st.session_state["my_input_11"])
-my_input_12 = st.text_input("Skills (1/3)", st.session_state["my_input_12"])
-my_input_13 = st.text_input("Skills (2/3)", st.session_state["my_input_13"])
-my_input_14 = st.text_input("Skills (3/3)", st.session_state["my_input_14"])
+my_input_4 = st.text_input("💼 Most Recent Work Experience (1/2): Job Title", st.session_state["my_input_4"])
+my_input_5 = st.text_input("🕙 Most Recent Work Experience (1/2): Time Duration", st.session_state["my_input_5"])
+my_input_6 = st.text_input("✨ Most Recent Work Experience (1/2): Key Outcome (1/2)", st.session_state["my_input_6"])
+my_input_7 = st.text_input("✨ Most Recent Work Experience (1/2): Key Outcome (2/2)", st.session_state["my_input_7"])
+my_input_8 = st.text_input("💼 Most Recent Work Experience (2/2): Job Title", st.session_state["my_input_8"])
+my_input_9 = st.text_input("🕙 Most Recent Work Experience (2/2): Time Duration", st.session_state["my_input_9"])
+my_input_10 = st.text_input("✨ Most Recent Work Experience (2/2): Key Outcome (1/2)", st.session_state["my_input_10"])
+my_input_11 = st.text_input("✨ Most Recent Work Experience (2/2): Key Outcome (2/2)", st.session_state["my_input_11"])
+my_input_12 = st.text_input("📝 Skills (1/3)", st.session_state["my_input_12"])
+my_input_13 = st.text_input("📝 Skills (2/3)", st.session_state["my_input_13"])
+my_input_14 = st.text_input("📝 Skills (3/3)", st.session_state["my_input_14"])
 
 
 submit=st.button("create digital resume")
