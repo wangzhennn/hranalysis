@@ -177,7 +177,7 @@ with st.expander("Tips for experience writing"):
     st.markdown("""
     Remember to use short sentence and try to use STAR (situation-target-ation-result) to describe your previous experience.
     """)
-my_input_4 = st.text_input("Most Recent Work Experience (1/2): Job Title", st.session_state["my_input_4"])
+my_input_4 = st.text_input("💼Most Recent Work Experience (1/2): Job Title", st.session_state["my_input_4"])
 my_input_5 = st.text_input("Most Recent Work Experience (1/2): Time Duration", st.session_state["my_input_5"])
 my_input_6 = st.text_input("Most Recent Work Experience (1/2): Key Outcome (1/2)", st.session_state["my_input_6"])
 my_input_7 = st.text_input("Most Recent Work Experience (1/2): Key Outcome (2/2)", st.session_state["my_input_7"])
