@@ -18,7 +18,11 @@ Senior Data Analyst, assisting enterprises by supporting data-driven decision-ma
 """
 EMAIL = "johndoe@email.com"
 PROJECTS = {
-    "🏆 st.write("you have entered", st.session_state["my_input_1"])",
+    "🏆 
+    if "my_input" not in st.session_state:
+        st.session_state["my_input"]=""
+    st.write("you have entered", st.session_state["my_input"])
+    ",
     "🏆 Income and Expense Tracker - Web app with NoSQL database": "https://youtu.be/3egaMfE9388",
     "🏆 Desktop Application - Excel2CSV converter with user settings & menubar": "https://youtu.be/LzCfNanQ_9c",
     "🏆 MyToolBelt - Custom MS Excel add-in to combine Python & Excel": "https://pythonandvba.com/mytoolbelt/",
