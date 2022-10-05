@@ -85,5 +85,9 @@ st.subheader("Hard Skills")
 if "my_input_12" not in st.session_state:
     st.session_state["my_input_12"]=""
 st.write("🌟",st.session_state["my_input_12"])
+if "my_input_13" not in st.session_state:
+    st.session_state["my_input_13"]=""
 st.write("🌟",st.session_state["my_input_13"])
+if "my_input_14" not in st.session_state:
+    st.session_state["my_input_14"]=""
 st.write("🌟",st.session_state["my_input_14"])
