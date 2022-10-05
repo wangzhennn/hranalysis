@@ -137,22 +137,22 @@ if st.button('Calaulate'):
             
             st.subheader(f'Heartbeat?  Create Digital Resume RIGHT NOW')
 
-            # ---- LINK TO RESUME ----
-            if "my_input" not in st.session_state:
-                st.session_state["my_input"]=""
-            if "my_input_1" not in st.session_state:
-                st.session_state["my_input_1"]=""
-            if "my_input_2" not in st.session_state:
-                st.session_state["my_input_2"]=""
+# ---- LINK TO RESUME ----
+if "my_input" not in st.session_state:
+    st.session_state["my_input"]=""
+if "my_input_1" not in st.session_state:
+    st.session_state["my_input_1"]=""
+if "my_input_2" not in st.session_state:
+    st.session_state["my_input_2"]=""
 
-            my_input = st.text_input("Name", st.session_state["my_input"])
-            my_input_1 = st.text_input("Discription", st.session_state["my_input_1"])
-            my_input_2 = st.text_input("Email", st.session_state["my_input_2"])
-            submit=st.button("create digital resume")
-            if submit:
-                st.session_state["my_input"]=my_input
-                st.session_state["my_input_1"]=my_input_1
-                st.session_state["my_input_2"]=my_input_2
+my_input = st.text_input("Name", st.session_state["my_input"])
+my_input_1 = st.text_input("Discription", st.session_state["my_input_1"])
+my_input_2 = st.text_input("Email", st.session_state["my_input_2"])
+submit=st.button("create digital resume")
+if submit:
+    st.session_state["my_input"]=my_input
+    st.session_state["my_input_1"]=my_input_1
+    st.session_state["my_input_2"]=my_input_2
 
 
 
