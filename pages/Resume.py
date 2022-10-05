@@ -93,5 +93,3 @@ if "my_input_14" not in st.session_state:
 st.write("🌟",st.session_state["my_input_14"])
 
 st.button('Submit to HR')
-
-st.wirte('stock_option')
