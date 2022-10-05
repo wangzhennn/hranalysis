@@ -30,7 +30,7 @@ with col1:
     st.title(NAME)
 
 with col2:
-    st.title("👤",NAME)
+    st.title(NAME)
     st.write("📒",DESCRIPTION)
     st.write("📫", EMAIL)
 
