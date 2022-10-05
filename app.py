@@ -124,8 +124,11 @@ if st.button('Calaulate'):
             
             shap_value = explainer.shap_values(line_to_pred)
             st_shap(shap.force_plot(explainer.expected_value, shap_value, line_to_pred), height=400, width=500)
-
-            st.subheader(f'Heartbeat As Action, Create Digital Resume Right Now')
+            with st.expander("Explaination for Prediction"):
+                st.markdown("""
+                The out is based on supervised machine learning technology, predicting potential income based on the current employees' features and your input
+                """)
+            st.subheader(f'Heartbeat? Create Digital Resume Right Now')
 
 # ---- LINK TO RESUME ----
 if "my_input" not in st.session_state:
