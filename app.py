@@ -51,6 +51,21 @@ model_xgb, scaler, ohe_pkl, cats, shap_values = read_objects()
 # ---- DEFINE EXPLAINER ----
 explainer = shap.TreeExplainer(model_xgb)
 
+# ---- LINK TO RESUME ----
+if "my_input" not in st.session_state:
+    st.session_state["my_input"]=""
+if "my_input_1" not in st.session_state:
+    st.session_state["my_input_1"]=""
+    
+my_input = st.text_input("Name", st.session_state["my_input"])
+my_input_1 = st.text_input("occu", st.session_state["my_input_1"])
+submit=st.button("submit")
+if submit:
+    st.session_state["my_input"]=my_input
+    st.session_state["my_input_1"]=my_input_1
+
+
+
 # ---- COLLECT INPUT FROM USER ----
 job_role=st.selectbox('Expected Job Position',options=ohe_pkl.categories_[2])
 age=st.number_input('Age',0,100)
