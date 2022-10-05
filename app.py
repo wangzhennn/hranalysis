@@ -48,8 +48,12 @@ explainer = shap.TreeExplainer(model_xgb)
 # ---- COLLECT INPUT FROM USER ----
 job_role=st.selectbox('Expected Job Position',options=ohe_pkl.categories_[2])
 age=st.number_input('Age',0,100)
-dfh=st.number_input('Distance From Home to Company (KM)',0,500)
+gender=st.selectbox('Gender',options=ohe_pkl.categories_[1])
+marital=st.selectbox('Marital Situation',options=ohe_pkl.categories_[3])
 edu=st.select_slider('Education Level',[1,2,3,4,5])
+dfh=st.number_input('Distance From Home to Company (KM)',0,500)
+num_companiesworked=st.number_input('Total Number of Companies You Have Been Worked',0,100)
+years_working=st.number_input('Years of Working Before',0,100)
 
 with st.expander("What's Education Level?"):
     st.markdown("""
@@ -57,15 +61,12 @@ with st.expander("What's Education Level?"):
     """)
 stock_option=st.select_slider('Expected Stock Option Level',[1,2,3,4,5])
 training=st.number_input('Expected Training Times per year',0,100)
-years_working=st.number_input('Years of Working Before',0,100)
-num_companiesworked=st.number_input('Total Number of Companies You Have Been Worked',0,100)
+
 performance=st.select_slider('Expected Performance',[1,2,3,4,5])
 job_involvement=st.select_slider('Expected Job Involvement',[1,2,3,4,5])
 satisfaction_job=st.select_slider('Expected Job Satisfaction',[1,2,3,4,5])
 wlb=st.select_slider('Expected Work Life Balance',[1,2,3,4,5])
 business_travel=st.selectbox('Expected Business Travel Frequency',options=ohe_pkl.categories_[0])
-gender=st.selectbox('Gender',options=ohe_pkl.categories_[1])
-marital=st.selectbox('Marital Situation',options=ohe_pkl.categories_[3])
 
 # make a nice button that triggers creation of a new data-line in the format that the model expects and prediction
 if st.button('Calaulate'):
