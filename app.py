@@ -163,7 +163,7 @@ my_input_6 = st.text_input("Skills", st.session_state["my_input_6"])
 
 with st.expander("Tips for experience writing"):
     st.markdown("""
-    Remember to use short sentence to describe your previous experience. You can also consider to use the STAR principle to make your description logical. However, this app is only used for testing, so don't write too much which will cost your time and feel free to use emojis!
+    Remember to use short sentence and try to use STAR (situation-target-ation-result) to describe your previous experience. Feel free to use emoji here.
     """)
 submit=st.button("create digital resume")
 if submit:
