@@ -122,7 +122,7 @@ if st.button('Calaulate'):
             predicted_value = model_xgb.predict(line_to_pred)[0]
             st.metric(label="Predicted Income", value=f'{round(predicted_value)} Ruppes per month' )
             
-            SOCIAL_MEDIA = {"Echange Rate": "https://www.xe.com/currencyconverter/"}
+            SOCIAL_MEDIA = {"Check Today's Exchange Rate": "https://www.xe.com/currencyconverter/"}
             st.write('\n')
             cols = st.columns(len(SOCIAL_MEDIA))
             for index, (platform, link) in enumerate(SOCIAL_MEDIA.items()):
