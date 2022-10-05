@@ -16,7 +16,7 @@ from sklearn.preprocessing import OneHotEncoder
 
 hru=pd.read_csv("hru.csv")
 
-st.title('hi')
+st.title('Predict Your Income in Company X💰')
 
 # ---- HIDE STREAMLIT STYLE ----
 hide_st_style = """
@@ -50,20 +50,20 @@ age=st.number_input('Age',0,100)
 dfh=st.number_input('Distance From Home To Company (km)',0,500)
 edu=st.select_slider('Education Level',[1,2,3,4,5])
 stock_option=st.select_slider('Expected Stock Option Level',[1,2,3,4,5])
-training=st.number_input('Expected Training Times per yer',0,100)
-years_working=st.number_input('working',0,100)
-num_companiesworked=st.number_input('Total number of companies you have worked for',0,100)
+training=st.number_input('Expected Training Times per year',0,100)
+years_working=st.number_input('Years of Working Before',0,100)
+num_companiesworked=st.number_input('Total Number of Companies You Have Been Worked',0,100)
 performance=st.select_slider('Expected Performance',[1,2,3,4,5])
 job_involvement=st.select_slider('Expected Job Involvement',[1,2,3,4,5])
 satisfaction_job=st.select_slider('Expected Job Satisfaction',[1,2,3,4,5])
 wlb=st.select_slider('Expected Work Life Balance',[1,2,3,4,5])
-business_travel=st.selectbox('business_travel',options=ohe_pkl.categories_[0])
-gender=st.selectbox('gender',options=ohe_pkl.categories_[1])
-job_role=st.selectbox('job_role',options=ohe_pkl.categories_[2])
-marital=st.selectbox('marital',options=ohe_pkl.categories_[3])
+business_travel=st.selectbox('Expected Business Travel Frequency',options=ohe_pkl.categories_[0])
+gender=st.selectbox('Gender',options=ohe_pkl.categories_[1])
+job_role=st.selectbox('Expected Job Role',options=ohe_pkl.categories_[2])
+marital=st.selectbox('Marital Situation',options=ohe_pkl.categories_[3])
 
 # make a nice button that triggers creation of a new data-line in the format that the model expects and prediction
-if st.button('Predict! 🚀'):
+if st.button('Calaulate'):
             # make a DF for the numericals and standard scale
             new_df_num = pd.DataFrame({'age':age,
                                'dfh':dfh,
@@ -107,8 +107,7 @@ if st.button('Predict! 🚀'):
 
             line_to_pred = pd.concat([new_values_num, new_values_cat], axis=1)
             predicted_value = model_xgb.predict(line_to_pred)[0]
-            st.metric(label="Predicted Income", value=f'{round(predicted_value)} ')
-            st.subheader(f'Wait, why {round(predicted_value)} kr? Explain, AI 🤖:')
+            st.metric(label="Predicted Income", value=f'{round(predicted_value)}' Rupees)
            
 
 
