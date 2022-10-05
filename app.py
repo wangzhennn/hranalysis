@@ -34,16 +34,7 @@ hide_st_style = """
             """
 st.markdown(hide_st_style, unsafe_allow_html=True)
 
-# TOP KPI's
-total_cp = int(hru["income"].sum())
 
-
-left_column, middle_column, right_column = st.columns(3)
-with left_column:
-    st.subheader("Total Sales:")
-    st.subheader(f"US $ {total_cp:,}")
-
-st.markdown("""---""")
 
 # ---- READ PREPROCESSED MODEL ----
 @st.experimental_singleton
@@ -133,7 +124,9 @@ if st.button('Calaulate'):
             
             shap_value = explainer.shap_values(line_to_pred)
             st_shap(shap.force_plot(explainer.expected_value, shap_value, line_to_pred), height=400, width=500)
-           
+
+            st.markdown("""---""")
+
 
 
 
