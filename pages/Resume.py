@@ -91,3 +91,5 @@ st.write("🌟",st.session_state["my_input_13"])
 if "my_input_14" not in st.session_state:
     st.session_state["my_input_14"]=""
 st.write("🌟",st.session_state["my_input_14"])
+
+st.button('submit')
