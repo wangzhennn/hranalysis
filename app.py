@@ -34,6 +34,17 @@ hide_st_style = """
             """
 st.markdown(hide_st_style, unsafe_allow_html=True)
 
+# TOP KPI's
+total_cp = int(hru["income"].sum())
+
+
+left_column, middle_column, right_column = st.columns(3)
+with left_column:
+    st.subheader("Total Sales:")
+    st.subheader(f"US $ {total_cp:,}")
+
+st.markdown("""---""")
+
 # ---- READ PREPROCESSED MODEL ----
 @st.experimental_singleton
 def read_objects():
