@@ -25,7 +25,7 @@ NAME=st.session_state["my_input"]
 
 if "my_input_1" not in st.session_state:
     st.session_state["my_input_1"]=""
-DESCRIPTION=st.write("you have entered", st.session_state["my_input_1"])
+DESCRIPTION=st.session_state["my_input_1"]
 
 
 # --- HERO SECTION ---
