@@ -22,8 +22,6 @@ hru=pd.read_csv("hru.csv")
 
 st.title('Predict Your Income in Company X')
 
-https://source.unsplash.com/0PSCd1wIrm4
-
 st.image('https://github.com/wangzhennn/hranalysis/blob/main/salary.jpg', caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
 
 # ---- HIDE STREAMLIT STYLE ----
