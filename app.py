@@ -159,7 +159,7 @@ my_input_2 = st.text_input("Email", st.session_state["my_input_2"])
 my_input_3 = st.text_input("Project Experience", st.session_state["my_input_3"])
 with st.expander("Tips for experience writing"):
     st.markdown("""
-    Remember to use short sentence and try to use STAR (situation-target-ation-result) to describe your previous experience. However, don't write too much here because there is no real HR to view your digital resumer here.
+    Remember to use short sentence and try to use STAR (situation-target-ation-result) to describe your previous experience. However, don't write too much here because there is no real HR to view your digital resumer here, so don't waste your time.
     """)
 my_input_4 = st.text_input("Most Recent Work Experience (1/2)", st.session_state["my_input_4"])
 my_input_5 = st.text_input("Most Recent Work Experience (2/2)", st.session_state["my_input_5"])
