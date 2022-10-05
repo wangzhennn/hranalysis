@@ -64,7 +64,7 @@ st.write(
 """
 )
 
-
+st.write("you have entered", st.session_state["my_input"])
 # --- SKILLS ---
 st.write('\n')
 st.subheader("Hard Skills")
