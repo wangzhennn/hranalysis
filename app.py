@@ -61,10 +61,10 @@ years_working=st.number_input('Years of Working Before',0,100)
 stock_option=st.select_slider('Expected Stock Option Level',[1,2,3,4,5])
 training=st.number_input('Expected Training Times per year',0,100)
 
-performance=st.select_slider('Expected Performance',[1,2,3,4,5])
-job_involvement=st.select_slider('Expected Job Involvement',[1,2,3,4,5])
-satisfaction_job=st.select_slider('Expected Job Satisfaction',[1,2,3,4,5])
-wlb=st.select_slider('Expected Work Life Balance',[1,2,3,4,5])
+performance=st.select_slider('Expected Job Performance Level',[1,2,3,4,5])
+job_involvement=st.select_slider('Expected Job Involvement Level',[1,2,3,4,5])
+satisfaction_job=st.select_slider('Expected Job Satisfaction Level',[1,2,3,4,5])
+wlb=st.select_slider('Expected Work Life Balance Level',[1,2,3,4,5])
 business_travel=st.selectbox('Expected Business Travel Frequency',options=ohe_pkl.categories_[0])
 
 # make a nice button that triggers creation of a new data-line in the format that the model expects and prediction
