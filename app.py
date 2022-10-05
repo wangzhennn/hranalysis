@@ -130,7 +130,7 @@ if st.button('Calaulate'):
             
             with st.expander("Explaination for Prediction"):
                 st.markdown("""
-                The outcome is calculated on the basis of supervised machine learning technology, predicting potential income based on the current employees' feature data and your input. The model will be continuously optimized to reduce MSE in the future.
+                The outcome is calculated on the basis of supervised machine learning technology, predicting potential income based on the current employees' feature data and your input. The following chart shows the rationale of specific features. This model will be continuously optimized to reduce MSE in the future.
                 """)
             shap_value = explainer.shap_values(line_to_pred)
             st_shap(shap.force_plot(explainer.expected_value, shap_value, line_to_pred), height=400, width=500)
