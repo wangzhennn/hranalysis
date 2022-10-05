@@ -126,7 +126,7 @@ if st.button('Calaulate'):
             st.write('\n')
             cols = st.columns(len(SOCIAL_MEDIA))
             for index, (platform, link) in enumerate(SOCIAL_MEDIA.items()):
-            cols[index].write(f"[{platform}]({link})")
+                cols[index].write(f"[{platform}]({link})")
             
             with st.expander("Explaination for Prediction"):
                 st.markdown("""
