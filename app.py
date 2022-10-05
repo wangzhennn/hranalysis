@@ -97,6 +97,9 @@ if st.button('Predict! 🚀'):
             new_values_cat['Research Scientist'] = 0
             new_values_cat['Sales Executive'] = 0
             new_values_cat['Sales Representative'] = 0
+            new_values_cat['Divorced'] = 0
+            new_values_cat['Marries'] = 0
+            new_values_cat['Single'] = 0
             new_values_cat[business_travel] = 1
             new_values_cat[gender] = 1
             new_values_cat[job_role] = 1
