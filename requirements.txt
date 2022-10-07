@@ -12,7 +12,3 @@ umap-learn
 seaborn
 pillow
 plotly
-python-dateutil==2.8.2
-pytz
-six
-tenacity
