@@ -12,7 +12,7 @@ umap-learn
 seaborn
 pillow
 plotly
-python-dataetil
+dataetil
 pytz
 six
 tenacity
