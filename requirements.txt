@@ -11,3 +11,8 @@ matplotlib
 umap-learn
 seaborn
 pillow
+plotly
+python-dataetil
+pytz
+six
+tenacity
