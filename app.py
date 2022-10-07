@@ -1,5 +1,3 @@
-#------------------- Update Streamlit -------------------
-pip install --upgrade streamlit
 #------------------- Input library -------------------
 import streamlit as st
 import pandas as pd
