@@ -1,19 +1,22 @@
+#------------------- Update Streamlit -------------------
+pip install --upgrade streamlit
+#------------------- Input library -------------------
+import streamlit as st
 import pandas as pd
 import numpy as np
-from matplotlib import pyplot as plt
-import altair as alt
 import umap.umap_ as umap
 import seaborn as sns
 sns.set()
-import streamlit as st
+from matplotlib import pyplot as plt
+import altair as alt
 import pickle
 import itertools
 import shap
 from streamlit_shap import st_shap
 from sklearn.preprocessing import StandardScaler
-from xgboost import XGBRegressor
 from sklearn.preprocessing import OneHotEncoder
-
+from xgboost import XGBRegressor
+#------------------- Input library -------------------
 st.set_page_config(
     page_title="HR Analysis",
     page_icon="🔍")
