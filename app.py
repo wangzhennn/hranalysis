@@ -15,10 +15,11 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.preprocessing import OneHotEncoder
 from xgboost import XGBRegressor
 #------------------- Input library -------------------
-st.sidebar.markdown("# Experience Pay Down")
 st.set_page_config(
     page_title="HR Analysis",
     page_icon="🔍")
+
+st.sidebar.markdown("# Experience Pay Down")
 
 hru=pd.read_csv("hru.csv")
 
