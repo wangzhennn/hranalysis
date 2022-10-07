@@ -102,5 +102,5 @@ try:
         )
     st.plotly_chart(st.session_state.fig)
     
-    except Exception as e:
-    st.write("Your visualization will apprear here when you've entered enough data.")
+    #except Exception as e:
+   # st.write("Your visualization will apprear here when you've entered enough data.")
