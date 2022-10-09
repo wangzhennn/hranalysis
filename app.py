@@ -19,7 +19,7 @@ st.set_page_config(
     page_title="HR Analysis",
     page_icon="🔍")
 
-st.sidebar.markdown("# What's other pb beyond job level 👀")
+st.sidebar.markdown("# Diagnosis beyond job level 👀")
 
 hru=pd.read_csv("hru.csv")
 
