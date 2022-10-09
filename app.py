@@ -19,7 +19,7 @@ st.set_page_config(
     page_title="HR Analysis",
     page_icon="🔍")
 
-st.sidebar.markdown("# What's beyond job level 👀")
+st.sidebar.markdown("# A tool for HR Manager to visualize what's other compensation setting problems beyond job level 👀")
 
 hru=pd.read_csv("hru.csv")
 
