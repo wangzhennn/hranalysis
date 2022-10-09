@@ -56,7 +56,6 @@ explainer = shap.TreeExplainer(model_xgb)
 
 # ---- COLLECT INPUT FROM USER ----
 job_role=st.selectbox('Expected Job Position',options=ohe_pkl.categories_[2])
-job_level=st.select_slider('Expected Job Level',[1,2,3,4,5])
 age=st.number_input('Age',0,100)
 gender=st.selectbox('Gender',options=ohe_pkl.categories_[1])
 marital=st.selectbox('Marital Situation',options=ohe_pkl.categories_[3])
@@ -85,7 +84,6 @@ if st.button('Calaulate'):
             new_df_num = pd.DataFrame({'age':age,
                                'dfh':dfh,
                                'edu':edu,
-                               'job_level':job_level,
                                'stock_option':stock_option,
                                'num_companiesworked':num_companiesworked,
                                'training':training,
